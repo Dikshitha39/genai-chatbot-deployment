@@ -47,7 +47,7 @@ if prompt := st.chat_input("Ask me anything..."):
             with st.spinner("Thinking..."):
                 client = Groq(api_key=api_key)
                 response = client.chat.completions.create(
-                    model="llama3-8b-8192",
+                    model="llama-3.1-8b-instant",
                     messages=st.session_state.messages
                 )
                 reply = response.choices[0].message.content
